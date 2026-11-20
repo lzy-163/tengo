@@ -23,7 +23,7 @@ jobs:
           ${{ runner.os }}-go-
     - name: setup env
       run: |
-        echo "name=GOPATH::$(go env GOPATH)" >> $GITHUB_ENV
+        echo "GOPATH=$(go env GOPATH)" >> $GITHUB_ENV
         echo "$(go env GOPATH)/bin" >> $GITHUB_PATH
       shell: bash
     - name: check out code
